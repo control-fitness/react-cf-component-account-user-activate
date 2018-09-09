@@ -33,7 +33,7 @@ class AccountUserActivate extends PureComponent {
 
   componentDidMount() {
     // parse query string
-    const params = queryString.parse(window.location.search);
+    const params = queryString.parse(window.location.search, { ignoreQueryPrefix: true });
 
     // set cf-tenant cookie
     Cookies.set('cf-tenant', params.tenant, { expires: 365 });
