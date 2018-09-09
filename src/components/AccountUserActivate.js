@@ -12,7 +12,7 @@ import {
 } from 'semantic-ui-react';
 import Cdn from 'react-cf-helper-cdn';
 import I18n from 'react-cf-helper-i18n';
-import queryString from 'query-string';
+import queryString from 'qs';
 import { Cookies } from 'react-cf-graphql-client';
 import request from '../api/request';
 import {
