@@ -35,19 +35,28 @@ class AccountUserActivate extends PureComponent {
     // parse query string
     const params = queryString.parse(window.location.search, { ignoreQueryPrefix: true });
 
-    // set cf-tenant cookie
-    Cookies.set('cf-tenant', params.tenant, { expires: 365 });
+    this.tenant(params);
+  }
 
-    request(params.confirmed_token).then((result) => {
-      // set cf-token cookie
-      Cookies.set('cf-token', result.data.accountUserActivate.token, { expires: 365 });
+  tenant(params) {
+    if (params.tenant !== Cookies.get('cf-tenant')) {
+      // set cf-tenant cookie
+      Cookies.set('cf-tenant', params.tenant, { expires: 365 });
 
-      // change state succes
-      this.setState({ success: true });
-    }).catch(() => {
-      // redirecto to error component
-      window.location = '/account/user/activate/error';
-    });
+      // redirect to validate cookie
+      window.location = `/account/user/activate?${queryString.stringify(params)}`;
+    } else {
+      request(params.confirmed_token).then((result) => {
+        // set cf-token cookie
+        Cookies.set('cf-token', result.data.accountUserActivate.token, { expires: 365 });
+
+        // change state succes
+        this.setState({ success: true });
+      }).catch(() => {
+        // redirecto to error component
+        window.location = '/account/user/activate/error';
+      });
+    }
   }
 
   renderButtonOrTexts() {
