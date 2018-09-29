@@ -1,6 +1,6 @@
 {
   "name": "react-cf-component-account-user-activate",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Control Fitness - Account - User - Activate.",
   "main": "index.js",
   "repository": "https://github.com/control-fitness/react-cf-component-account-user-activate.git",
@@ -19,7 +19,7 @@
   "dependencies": {
     "qs": "^6.5.2",
     "react": "^16.4.1",
-    "react-cf-graphql-client": "^0.0.4",
+    "react-cf-graphql-client": "^0.0.7",
     "react-cf-helper-cdn": "^0.0.3",
     "react-cf-helper-i18n": "^0.1.2",
     "react-dom": "^16.4.1",
