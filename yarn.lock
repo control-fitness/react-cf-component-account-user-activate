@@ -4219,9 +4219,9 @@ react-cf-graphql-client@^0.0.4:
     graphql-tag "^2.9.2"
     js-cookie "^2.2.0"
 
-react-cf-helper-cdn@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/react-cf-helper-cdn/-/react-cf-helper-cdn-0.0.2.tgz#74c7c933f5a2489b9d8c04b0ebbe66820f8bd65a"
+react-cf-helper-cdn@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-cf-helper-cdn/-/react-cf-helper-cdn-0.0.3.tgz#4a6dce816ffbb1f30a4654074665c18bc3e5b356"
 
 react-cf-helper-i18n@^0.1.2:
   version "0.1.2"
